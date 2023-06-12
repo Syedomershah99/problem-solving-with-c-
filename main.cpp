@@ -1,10 +1,4 @@
-/******************************************************************************
-
-                              Online C++ Compiler.
-               Code, Compile, Run and Debug C++ program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
+// Q) How to calculate the smaller angle between the hour and minute hands based on user input for hours and minutes in C++?
 
 #include <iostream>
 #include <cmath>
