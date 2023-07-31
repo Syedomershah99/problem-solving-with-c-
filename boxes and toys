@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+  using namespace std;
+  
+  int main()
+  {
+    //write your code here
+    int n;
+    int x,y,i=0;
+    cin>>n;
+    while(n--)
+    {
+      cin>>x;
+      cin>>y;
+      if(y-x>=2)
+      {
+       i++;
+      }
+    }
+    cout<<i;
+    
+    return 0;
+  }
