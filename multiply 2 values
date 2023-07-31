@@ -1,0 +1,15 @@
+//Program to multiply the input of two numbers
+
+#include <bits/stdc++.h>
+  using namespace std;
+  
+  int main()
+  {
+    //write your code here
+    int x,y;
+    cin>>x>>y;
+    int mul = x*y;
+    cout<<mul;
+    
+    return 0;
+  }
