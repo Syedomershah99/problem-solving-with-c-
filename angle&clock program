@@ -1,0 +1,26 @@
+//Angle and Clock program
+
+#include <bits/stdc++.h>
+  using namespace std;
+  int main()
+  {
+    //write your code here
+    int h,m,t,ang;
+    cin>>t;
+    while(t>0)
+    {
+      cin>>h;
+      cin>>m;
+    h = (h*30)+(m*0.5);
+    m = m*6;
+    ang = abs(h-m);
+    if(ang>180)
+    {
+      cout<<360-ang<<endl;
+    }
+    else{
+     cout<<ang<<endl;
+    }  t--;
+  }
+    return 0;
+}
