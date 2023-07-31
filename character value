@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+  using namespace std;
+  int main()
+  {
+     char text;
+     cin>>text;
+     if(text=='p' || text=='P')
+       cout<<"PrepBytes"<<endl;
+     else if(text=='z' || text=='Z')
+       cout<<"Zenith"<<endl;
+     else if(text=='e' || text=='E')
+       cout<<"Expert Coder"<<endl;
+     else
+       cout<<"Data Structure"<<endl;
+    return 0;
+  }
