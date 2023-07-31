@@ -1,0 +1,14 @@
+//Modulus Program
+#include <bits/stdc++.h>
+  using namespace std;
+  
+  int main()
+  {
+    //write your code here
+    int x;
+    cin>>x;
+   int mod = x%10;
+    cout<<mod;
+    
+    return 0;
+  }
