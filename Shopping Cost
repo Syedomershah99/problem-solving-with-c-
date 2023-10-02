@@ -1,0 +1,38 @@
+Tina is preparing a shopping list containing 
+N
+ items. She knows the quantity and price of each item on the list. The shop is offering a 
+20
+%
+ discount on the items with a quantity of more than 
+100
+ units. Given the quantity and price of each of the 
+N
+ items, your task is to calculate how much each item will cost.
+
+#include <iostream>
+#include <iomanip> // For setting precision
+using namespace std;
+
+int main() {
+    int N;
+    cin >> N;
+
+    while (N--) {
+        int quantity, price;
+        cin >> quantity >> price;
+
+        double cost;
+
+        // Check for discount and calculate cost
+        if (quantity > 100) {
+            cost = quantity * price * 0.8; // 20% discount
+        } else {
+            cost = quantity * price;
+        }
+
+        // Print the result with a single digit after the decimal point
+        cout << fixed << setprecision(1) << cost << endl;
+    }
+
+    return 0;
+}
