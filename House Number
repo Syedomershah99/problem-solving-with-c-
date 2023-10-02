@@ -1,0 +1,44 @@
+Rahul is living in a colony containing 
+N
+ houses. He needs to label each house with a number from 
+1
+ to 
+N
+. Each house will be labelled with a distinct number. Rahul wants to know how many digits he will have to write down as he labels the houses.
+
+Input format
+The first line of the input contains integer 
+T
+, denoting the number of test cases.
+Each of the next 
+T
+ lines contains one integer denoting the value of 
+N
+.
+
+Output format
+Print the number of digits needed to number all the houses.
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int countDigits(int N) {
+    return floor(log10(N) + 1);
+}
+
+int main() {
+    int T;
+    cin >> T;
+
+    while (T--) {
+        int N;
+        cin >> N;
+
+        int digitsNeeded = countDigits(N);
+
+        cout << digitsNeeded << endl;
+    }
+
+    return 0;
+}
