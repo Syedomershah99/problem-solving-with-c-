@@ -1,0 +1,42 @@
+Among all the digits from 
+0
+−
+9
+, PrepBuddy likes the number 
+5
+. He has lots of numbers and wants you to find out the number of times 
+5
+ occurred in each number.
+
+
+#include <iostream>
+using namespace std;
+
+int countDigit5(int N) {
+    int count = 0;
+
+    while (N > 0) {
+        if (N % 10 == 5) {
+            count++;
+        }
+        N /= 10;
+    }
+
+    return count;
+}
+
+int main() {
+    int T;
+    cin >> T;
+
+    while (T--) {
+        int N;
+        cin >> N;
+
+        int occurrences = countDigit5(N);
+
+        cout << occurrences << endl;
+    }
+
+    return 0;
+}
