@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int X;
+    cin >> X;
+
+    int sum = 0;
+
+    // Loop through each digit and add it to the sum
+    while (X > 0) {
+        sum += X % 10;
+        X /= 10;
+    }
+
+    cout << sum << endl;
+
+    return 0;
+}
