@@ -1,0 +1,115 @@
+Bablu and Dablu are traveling by train. This time they are traveling without their parents. Bablu wants to know the arrangement of seats inside the train coach.
+The entire coach could be viewed as an arrangement of consecutive blocks of size 
+8
+.
+
+Berth Number   Compartment
+1 -  8    1
+9 - 16    2
+17 - 24    3
+... and so on
+Each of these size-
+8
+ blocks are further arranged as:
+1
+L
+B
+,
+2
+M
+B
+,
+3
+U
+B
+,
+4
+L
+B
+,
+5
+M
+B
+,
+6
+U
+B
+,
+7
+S
+L
+,
+8
+S
+U
+,
+9
+L
+B
+,
+10
+M
+B
+,
+.
+.
+.
+.
+.
+.
+
+Here LB denotes lower berth, MB middle berth, and UB upper berth.
+
+The following berths are called Train-Partners:
+7SL |  8SU
+3UB |  6UB 
+2MB |  5MB
+1LB |  4LB
+and the pattern is repeated for every set of 
+8
+ berths.
+Bablu and Dablu are playing a game of finding the train partner of each berth. But they are not able to find the right partner, they ask for help.
+
+#include <iostream>
+using namespace std;
+
+int findTrainPartner(int berth) {
+    int rem = berth % 8;
+    
+    switch (rem) {
+        case 1:
+            return berth + 3;
+        case 2:
+            return berth + 3;
+        case 3:
+            return berth + 3;
+        case 4:
+            return berth - 3;
+        case 5:
+            return berth - 3;
+        case 6:
+            return berth - 3;
+        case 7:
+            return berth + 1;
+        case 0:
+            return berth - 1;
+    }
+
+    return -1; // Default case, should not happen
+}
+
+int main() {
+    int T;
+    cin >> T;
+
+    while (T--) {
+        int N;
+        cin >> N;
+
+        int partner = findTrainPartner(N);
+
+        cout << partner << endl;
+    }
+
+    return 0;
+}
