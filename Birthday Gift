@@ -1,0 +1,51 @@
+Abhishek and Gaurav are the best friends, today is Gaurav's birthday, but Abhishek forgot to buy a gift for him. Gaurav is very angry with him. Abhishek has an idea for a gift. Gaurav likes coding very much. So Abhishek gave him a problem to solve as his gift. Gaurav likes everything infinitely. Abhishek gave him a sequence problem, such that its first element is equal to 
+A
+ 
+(
+S
+1
+=
+A
+)
+, and the difference between any two adjacent elements is (
+S
+i
+ - 
+S
+i
+−
+1
+ = 
+C
+. In particular, Gaurav wonders if his favorite integer 
+B
+ appears in this sequence, that is, there exists a positive integer 
+i
+, such that 
+S
+i
+ = 
+B
+. Gaurav is busy at his birthday party, he asks you to solve this problem.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+
+    while (T--) {
+        long long A, B, C;
+        cin >> A >> B >> C;
+
+        // Check if B is reachable from A with steps of size C
+        if ((B - A) % C == 0 && ((B - A) / C) >= 0) {
+            cout << "YES" << endl;
+        } else {
+            cout << "NO" << endl;
+        }
+    }
+
+    return 0;
+}
