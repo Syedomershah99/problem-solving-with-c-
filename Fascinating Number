@@ -1,0 +1,43 @@
+#include <iostream>
+#include <unordered_set>
+using namespace std;
+
+bool isFascinating(int num) {
+    unordered_set<int> digits;
+    
+    while (num > 0) {
+        int digit = num % 10;
+        if (digits.find(digit) != digits.end()) {
+            return false; // Not fascinating if digit repeats
+        }
+        digits.insert(digit);
+        num /= 10;
+    }
+    
+    return true;
+}
+
+int findNextFascinating(int num) {
+    while (true) {
+        num++;
+        if (isFascinating(num)) {
+            return num;
+        }
+    }
+}
+
+int main() {
+    int N;
+    cin >> N;
+
+    while (N--) {
+        int num;
+        cin >> num;
+
+        int nextFascinating = findNextFascinating(num);
+
+        cout << nextFascinating << endl;
+    }
+
+    return 0;
+}
