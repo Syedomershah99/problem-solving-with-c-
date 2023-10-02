@@ -1,0 +1,50 @@
+Bank Manager
+Gaurav works in a bank and one day bank manager gives him a character P which is already printed and tells him to print character P exactly 
+N
+ times. The bank manager told Gaurav, you are allowed to perform only these operations.
+1. Copy All – This operation will copy all the printed characters.
+2. Paste – This operation will paste all the characters which are already copied.
+Gaurav asks you for help to print character P exactly 
+N
+ times with the minimum number of operations.
+
+Input Format
+The first line contains an integer 
+T
+ denoting the number of test cases.
+Each test case contain an integer 
+N
+.
+
+Output Format
+Print the minimum number of operations required.
+
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int minOperations(int N) {
+    for (int i = 2; i <= sqrt(N); ++i) {
+        if (N % i == 0) {
+            return i + minOperations(N / i);
+        }
+    }
+    return N; // N is a prime number
+}
+
+int main() {
+    int T;
+    cin >> T;
+
+    while (T--) {
+        int N;
+        cin >> N;
+
+        int operations = minOperations(N);
+
+        cout << operations << endl;
+    }
+
+    return 0;
+}
